@@ -9,8 +9,8 @@ import (
 	"os"
 	"testing"
 
+	"github.com/SmartBFT-Go/fabric-chaincode-go/shim/internal/mock"
 	peerpb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric-chaincode-go/shim/internal/mock"
 
 	"github.com/stretchr/testify/assert"
 )

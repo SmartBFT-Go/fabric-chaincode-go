@@ -6,10 +6,10 @@ package statebased_test
 import (
 	"testing"
 
+	"github.com/SmartBFT-Go/fabric-chaincode-go/pkg/statebased"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-chaincode-go/pkg/statebased"
 	"github.com/stretchr/testify/assert"
 )
 

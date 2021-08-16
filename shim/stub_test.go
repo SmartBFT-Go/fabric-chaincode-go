@@ -9,11 +9,11 @@ import (
 	"os"
 	"testing"
 
+	"github.com/SmartBFT-Go/fabric-chaincode-go/shim/internal/mock"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
 	peerpb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-chaincode-go/shim/internal/mock"
 
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golang/protobuf/ptypes/timestamp"

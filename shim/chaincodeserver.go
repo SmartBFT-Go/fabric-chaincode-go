@@ -7,8 +7,8 @@ import (
 	"crypto/tls"
 	"errors"
 
+	"github.com/SmartBFT-Go/fabric-chaincode-go/shim/internal"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric-chaincode-go/shim/internal"
 
 	"google.golang.org/grpc/keepalive"
 )
