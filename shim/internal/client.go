@@ -8,7 +8,7 @@ import (
 	"crypto/tls"
 	"time"
 
-	peerpb "github.com/hyperledger/fabric-protos-go/peer"
+	peerpb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/keepalive"

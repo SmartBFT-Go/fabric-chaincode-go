@@ -13,8 +13,8 @@ import (
 	"testing"
 	"time"
 
+	peerpb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	. "github.com/hyperledger/fabric-chaincode-go/shim/internal"
-	peerpb "github.com/hyperledger/fabric-protos-go/peer"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"

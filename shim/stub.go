@@ -11,11 +11,11 @@ import (
 	"os"
 	"unicode/utf8"
 
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
+	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/timestamp"
-	"github.com/hyperledger/fabric-protos-go/common"
-	"github.com/hyperledger/fabric-protos-go/ledger/queryresult"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
 )
 
 // ChaincodeStub is an object passed to chaincode for shim side handling of
@@ -448,12 +448,12 @@ func CreateCompositeKey(objectType string, attributes []string) (string, error) 
 	if err := validateCompositeKeyAttribute(objectType); err != nil {
 		return "", err
 	}
-	ck := compositeKeyNamespace + objectType + string(minUnicodeRuneValue)
+	ck := compositeKeyNamespace + objectType + string(rune(minUnicodeRuneValue))
 	for _, att := range attributes {
 		if err := validateCompositeKeyAttribute(att); err != nil {
 			return "", err
 		}
-		ck += att + string(minUnicodeRuneValue)
+		ck += att + string(rune(minUnicodeRuneValue))
 	}
 	return ck, nil
 }

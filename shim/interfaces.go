@@ -4,9 +4,9 @@
 package shim
 
 import (
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
+	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	"github.com/golang/protobuf/ptypes/timestamp"
-	"github.com/hyperledger/fabric-protos-go/ledger/queryresult"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
 )
 
 // Chaincode interface must be implemented by all chaincodes. The fabric runs
@@ -47,13 +47,13 @@ type ChaincodeStubInterface interface {
 
 	// GetTxID returns the tx_id of the transaction proposal, which is unique per
 	// transaction and per client. See
-	// https://godoc.org/github.com/hyperledger/fabric-protos-go/common#ChannelHeader
+	// https://godoc.org/github.com/SmartBFT-Go/fabric-protos-go/v2/common#ChannelHeader
 	// for further details.
 	GetTxID() string
 
 	// GetChannelID returns the channel the proposal is sent to for chaincode to process.
 	// This would be the channel_id of the transaction proposal (see
-	// https://godoc.org/github.com/hyperledger/fabric-protos-go/common#ChannelHeader )
+	// https://godoc.org/github.com/SmartBFT-Go/fabric-protos-go/v2/common#ChannelHeader )
 	// except where the chaincode is calling another on a different channel.
 	GetChannelID() string
 
